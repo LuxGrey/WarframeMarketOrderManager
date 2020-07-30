@@ -7,7 +7,7 @@
   * [A lacking solution](###a-lacking-solution)
   * [A better solution](###a-better-solution)
 * [How to use the program](##how-to-use-the-program)
-  * [Settign up first time](###setting-up-first-time)
+  * [Setting up first time](###setting-up-first-time)
   * [Workflow](###workflow)
 
 ## What is this project?
@@ -48,8 +48,15 @@ It's this program. It let's you specify with a few simple commands which Syndica
 
 ## How to use the program
 
-Start the program and a console window should open (if you did not open the program from console already).
-You can type `help` to get a full list of available commands.
+If you know what you're doing you can just download the code from this repository and compile+run it yourself.  
+A more comfortable solution would be to download the latest release of my program, which is an executable JAR file.  
+In any case you need to have Java installed on your device.  
+To start the program, open the command line (under Windows it can be found by typing "cmd" in your search bar) and type the following command:
+`java -jar /path_to_jar_file/WarframeMarketOrderManager.jar`  
+Can't make it much easier for you right now.
+
+Once the program has started, type `help` to get a full list of available commands.
+I also urge you to use the built-in `exit`command if you want to exit the program, so that it can properly save configuration data for the next start.
 
 ### Setting up first time
 
