@@ -1,6 +1,13 @@
-import java.io.FileInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
@@ -8,8 +15,7 @@ import java.util.Properties;
  * It also acts as a container for those values when they are loaded into the program.
  */
 public class PropertyManager {
-  private static final String PROPERTY_FILE_NAME = "user_info.properties";
-  private static final String PROPERTY_FILE_LOCATION = System.getProperty("user.dir") + "/resources/";
+  private static final String PROPERTY_FILE_LOCATION = "user_info.properties";
   private static Properties properties;
 
   public static void init() {
@@ -22,7 +28,9 @@ public class PropertyManager {
    */
   private static void loadProperties(){
     try {
-      properties.load(new FileInputStream(PROPERTY_FILE_LOCATION + PROPERTY_FILE_NAME));
+      InputStream inputStream = PropertyManager.class.getResourceAsStream(PROPERTY_FILE_LOCATION);
+      properties.load(inputStream);
+      inputStream.close();
     }
     catch (IOException e) {
       System.out.println(e.getMessage());
@@ -35,7 +43,17 @@ public class PropertyManager {
    */
   public static void storeProperties() {
     try {
-      properties.store(new FileWriter(PROPERTY_FILE_LOCATION + PROPERTY_FILE_NAME), null);
+      URL url = PropertyManager.class.getResource(PROPERTY_FILE_LOCATION);
+      File file;
+      try {
+        file = new File(url.toURI());
+      }
+      catch (URISyntaxException e) {
+        file = new File(url.getPath());
+      }
+      FileOutputStream fos = new FileOutputStream(file);
+      properties.store(fos, null);
+      fos.close();
     }
     catch (IOException e) {
       System.out.println(e.getMessage());
