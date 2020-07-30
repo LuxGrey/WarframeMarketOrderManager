@@ -1,4 +1,6 @@
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,13 +26,27 @@ public class PropertyManager {
   }
 
   /**
-   * Loads properties from property file and stores them in properties member field
+   * Loads properties from property file and stores them in properties member field.
    */
   private static void loadProperties(){
     try {
-      InputStream inputStream = PropertyManager.class.getResourceAsStream(PROPERTY_FILE_LOCATION);
+      FileInputStream inputStream = new FileInputStream(PROPERTY_FILE_LOCATION);
       properties.load(inputStream);
       inputStream.close();
+    }
+    catch (FileNotFoundException e) {
+      //initialize with standard values
+      setVisibleNewLoka(true);
+      setVisibleThePerrinSequence(true);
+      setVisibleRedVeil(true);
+      setVisibleSteelMeridian(true);
+      setVisibleCephalonSuda(true);
+      setVisibleArbitersOfHexis(true);
+      setUserName("");
+      setJWT("");
+
+      //create new properties file
+      storeProperties();
     }
     catch (IOException e) {
       System.out.println(e.getMessage());
@@ -39,19 +55,11 @@ public class PropertyManager {
   }
 
   /**
-   * Persists data in properties member field to property file
+   * Persists data in properties member field to property file.
    */
   public static void storeProperties() {
     try {
-      URL url = PropertyManager.class.getResource(PROPERTY_FILE_LOCATION);
-      File file;
-      try {
-        file = new File(url.toURI());
-      }
-      catch (URISyntaxException e) {
-        file = new File(url.getPath());
-      }
-      FileOutputStream fos = new FileOutputStream(file);
+      FileOutputStream fos = new FileOutputStream(PROPERTY_FILE_LOCATION);
       properties.store(fos, null);
       fos.close();
     }

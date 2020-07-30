@@ -25,3 +25,6 @@ out/
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# locally created properties file
+user_info.properties
