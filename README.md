@@ -54,6 +54,7 @@ In any case you need to have Java installed on your device.
 To start the program, open the command line (under Windows it can be found by typing "cmd" in your search bar) and type the following command:
 `java -jar /path_to_jar_file/WarframeMarketOrderManager.jar`  
 Can't make it much easier for you right now.
+Note that the program will create a local file called `user_info.properties`. It should not be removed from the location where it is created; otherwise the program will simply create a new one with default values. This file persists data used by the program, most importantly your Warframe.market username and your JSON Web Token. Therefore, you should make sure that no one else has access to this file.
 
 Once the program has started, type `help` to get a full list of available commands.
 I also urge you to use the built-in `exit`command if you want to exit the program, so that it can properly save configuration data for the next start.
