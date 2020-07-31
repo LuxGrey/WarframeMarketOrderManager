@@ -9,6 +9,7 @@
 * [How to use the program](##how-to-use-the-program)
   * [Setting up first time](###setting-up-first-time)
   * [Workflow](###workflow)
+* [Possible issues](##possible-issues)
 
 ## What is this project?
 
@@ -76,3 +77,9 @@ Since many items can be acquired from multiple different Syndicates, the followi
 * If all Syndicates, from which the item can be acquired, are set as 'invisible', then the item's sell order on your profile will be set invisible.
 * If one ore more of the Syndicates, from which the item can be acquired, are set as 'visible', then the item's sell order on your profile will be set visible.
 To update your orders on Warframe.market based on your Syndicate visibility settings, use the `update` command.
+
+## Possible issues
+
+* **Orders that should have been updated weren't**  
+If you run the `update` command of my program and then notice that, out of those orders that should have been updated, some remain unchanged, it likely is an issue with the data provided by Warframe.market.  
+All information about items is taken from Warframe.market and any occurring errors or inconsistencies can create these issues.
