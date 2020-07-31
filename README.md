@@ -31,7 +31,7 @@ It caters to traders who offer a lot of items that can be acquired from Syndicat
 
 The trader acquires the Syndicate items that they intend to sell on demand; that means that they usually don't own the items that they
 offer for sale yet and only retrieve them from a Syndicate when another trader specifically asks for them.  
-The purpose of this trade style is to keep a broad range of offers, in order to increase sale rates, while not having to stockpile items for all your offers, since the items tend to varry greatly in demand.  
+The purpose of this trade style is to keep a broad range of offers, in order to increase sale rates, while not having to stockpile items for all your offers, since the items tend to vary greatly in demand.  
 Essentially, the trader only spends precious Syndicate standing when there is a current request for a specific item.  
 
 ### The problem with that style
@@ -66,7 +66,7 @@ The program needs the following info from you:
 * ``username`` - This is the username of your Warframe.market profile. Specifically, it needs to be the one displayed in the URL of your profile; from ``warframe.market/profile/<your_user_name>``, use the ``<your_user_name>`` component (without <>, of course).  
 This is required so that the program knows which Warframe.market profile it has to manage.
 * ``jwt`` - This is the JSON Web Token that enables the program to perform actions on your Warframe.market account that only an authenticated user is allowed to. To get your JWT, open Warframe.market in your browser and ensure that you are logged in with the user account that you want the program to manage. It will be stored in the Cookie for warframe.market with the name "JWT".  
-Below you can see an example for how to find that Cookie in Chrome. While on the Warframe.market website, open Chrome's developer window ([F12] key), navigate to the 'Application' tab at the top and select 'https://warframe.market' from the Cookies in the left sidebar. A table should then open, containing columns for 'Name' and 'Value', among othert things. My program needs the text from the 'Value' field within the row with the name 'JWT'; you can just copy and paste it into the console when setting the JWT.
+Below you can see an example for how to find that Cookie in Chrome. While on the Warframe.market website, open Chrome's developer window ([F12] key), navigate to the 'Application' tab at the top and select 'https://warframe.market' from the Cookies in the left sidebar. A table should then open, containing columns for 'Name' and 'Value', among other things. My program needs the text from the 'Value' field within the row with the name 'JWT'; you can just copy and paste it into the console when setting the JWT.
 ![Screenshot finding Warframe.market JWT in Chrome](get_jwt_chrome_example.png)
 Note that the JWT used by the program may expire, for instance if it hasn't been refreshed for 60 days, and you will have to acquire a new one to provide to the program.
 
