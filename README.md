@@ -62,7 +62,7 @@ I also urge you to use the built-in `exit`command if you want to exit the progra
 
 ### Setting up first time
 
-If you are running the program for the first time, you need to provide it with some info regarding your Warframe.market profile, so that it is actually able to perform its tasks. Before you give it your info, make sure you have read [the disclaimer](##important-disclaimer).  
+If you are running the program for the first time, you need to provide it with some info regarding your Warframe.market profile, so that it is actually able to perform its tasks. Before you give it your info, make sure you have read [the disclaimer](#important-disclaimer).  
 The program needs the following info from you:
 * ``username`` - This is the username of your Warframe.market profile. Specifically, it needs to be the one displayed in the URL of your profile; from ``warframe.market/profile/<your_user_name>``, use the ``<your_user_name>`` component (without <>, of course).  
 This is required so that the program knows which Warframe.market profile it has to manage.
