@@ -1,15 +1,15 @@
 # README
-* [What is this project?](##what-is-this-project?)
-* [Important Disclaimer](##important-disclaimer)
-* [What does the program do?](##what-does-the-program-do?)
-  * [The trading style that makes it useful](###the-trading-style-that-makes-it-useful)
-  * [The problem with that style](###the-problem-with-that-style)
-  * [A lacking solution](###a-lacking-solution)
-  * [A better solution](###a-better-solution)
-* [How to use the program](##how-to-use-the-program)
-  * [Setting up first time](###setting-up-first-time)
-  * [Workflow](###workflow)
-* [Possible issues](##possible-issues)
+* [What is this project?](#what-is-this-project)
+* [Important Disclaimer](#important-disclaimer)
+* [What does the program do?](#what-does-the-program-do)
+  * [The trading style that makes it useful](#the-trading-style-that-makes-it-useful)
+  * [The problem with that style](#the-problem-with-that-style)
+  * [A lacking solution](#a-lacking-solution)
+  * [A better solution](#a-better-solution)
+* [How to use the program](#how-to-use-the-program)
+  * [Setting up first time](#setting-up-first-time)
+  * [Workflow](#workflow)
+* [Possible issues](#possible-issues)
 
 ## What is this project?
 
