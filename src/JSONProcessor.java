@@ -9,7 +9,7 @@ import org.json.JSONObject;
  */
 public class JSONProcessor {
   private static final String[] SYNDICATE_SOURCES = {
-      "New Loka", "The Perrin Sequence", "Red Veil",
+      "New Loka", "Perrin Sequence", "Red Veil",
       "Steel Meridian", "Cephalon Suda", "Arbiters of Hexis"
   };
 
@@ -156,7 +156,7 @@ public class JSONProcessor {
         case "New Loka":
           currentVisibility = PropertyManager.getVisibleNewLoka();
           break;
-        case "The Perrin Sequence":
+        case "Perrin Sequence":
           currentVisibility = PropertyManager.getVisibleThePerrinSequence();
           break;
         case "Red Veil":
